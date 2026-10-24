@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contador de Barra Espaciadora | Prueba de Velocidad Gratis</title>
+<meta name="description" content="Prueba de barra espaciadora gratis: cuenta tus pulsaciones en 1, 5, 10, 30 o 60 segundos o sin límite. Mira tus HPS, tu rango y tu récord. Sin registro.">
+<link rel="canonical" href="https://contador-barra-espaciadora.github.io/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Barra Veloz">
+<meta property="og:title" content="Contador de Barra Espaciadora: ¿cuántas veces puedes pulsarla?">
+<meta property="og:description" content="Elige el tiempo, pulsa la barra espaciadora lo más rápido que puedas y descubre tu rango. Gratis y sin registro.">
+<meta property="og:url" content="https://contador-barra-espaciadora.github.io/">
+<meta property="og:image" content="https://contador-barra-espaciadora.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Contador de barra espaciadora de Barra Veloz">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#A3122B">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<!-- Google AdSense: pega aquí el script de AdSense que te da Google (en el <head> de todas las páginas) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Contador de Barra Espaciadora",
+  "alternateName": ["Prueba de velocidad de la barra espaciadora", "Contador de pulsaciones de la barra espaciadora"],
+  "url": "https://contador-barra-espaciadora.github.io/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Cualquiera (navegador web)",
+  "inLanguage": "es",
+  "isAccessibleForFree": true,
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+  "description": "Prueba en línea que cuenta tus pulsaciones de la barra espaciadora en 1, 5, 10, 15, 30, 60 o 100 segundos, o sin límite, y calcula tus golpes por segundo (HPS)."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué mide esta prueba de la barra espaciadora?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cuenta cuántas veces pulsas la tecla de espacio en un tiempo determinado y calcula tus golpes por segundo, tu pico de velocidad y tu rango."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El contador de barra espaciadora es gratis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Es totalmente gratis, funciona en el navegador y no necesitas registrarte ni instalar nada."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál es una buena velocidad en la barra espaciadora?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En pruebas cortas, una persona media consigue entre 6 y 8 golpes por segundo. A partir de 9 se considera muy rápido y por encima de 12 es nivel de élite."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuántas pulsaciones es normal hacer en 10 segundos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lo habitual está entre 55 y 75 pulsaciones. Entre 80 y 100 es un resultado bueno, y más de 115 es muy rápido."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuándo empieza a contar el cronómetro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Con tu primera pulsación. Así no pierdes tiempo de reacción y la prueba es justa desde el primer golpe."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Por qué no cuenta si mantengo pulsada la barra espaciadora?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Porque al dejar una tecla apretada el sistema repite el carácter de forma automática. Esas repeticiones no son pulsaciones reales, así que el contador las ignora."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Funciona en el móvil y en la tablet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. En pantallas táctiles, toca la tecla grande que aparece en la prueba. Cada toque cuenta como una pulsación."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se guardan mis resultados?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tu récord de cada duración y tus últimos intentos se guardan solo en tu navegador. No se envían a ningún servidor y desaparecen si borras los datos del navegador."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Mi teclado afecta al resultado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. El tipo de interruptor, el recorrido de la tecla, los estabilizadores y la conexión influyen. Para comparar con otras personas, lo más justo es usar el mismo teclado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es lo mismo HPS que CPS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Miden lo mismo: acciones por segundo. CPS se usa para los clics del ratón y HPS para los golpes de teclado. Los resultados no son directamente comparables, porque ratón y teclado se pulsan de forma distinta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Existe un récord mundial de la barra espaciadora?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No hay un récord oficial. Cada web tiene sus propias clasificaciones y las marcas cambian según el teclado y la duración. En pruebas muy cortas, algunos jugadores superan los 14 golpes por segundo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo usar la prueba para saber si mi barra espaciadora está rota?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sirve como primera comprobación. Usa el modo sin límite y pulsa despacio: cada pulsación debe sumar exactamente uno. Si cuenta doble o se salta pulsaciones, revisa la tecla."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Pulsar muy rápido puede hacerme daño?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unas cuantas pruebas no suelen causar problemas, pero repetir durante mucho rato puede cargar los tendones. Descansa entre intentos y para si notas dolor u hormigueo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo usar otra tecla?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Esta prueba está pensada solo para la barra espaciadora, que es la tecla que se usa en los retos y en los juegos. En el móvil se usa el toque en pantalla."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="band band-hero">
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Barra Veloz, inicio"><span class="brand-mark" aria-hidden="true"></span>Barra Veloz</a>
+    </div>
+  </header>
+  <div class="wrap">
+    <section class="hero">
+      <p class="eyebrow">Gratis y sin registro</p>
+      <h1>Contador de barra espaciadora <span>¿Cuántas veces puedes pulsarla?</span></h1>
+      <p class="lead">Elige un tiempo de 1 a 100 segundos, o sin límite, y pulsa lo más rápido que puedas. Al terminar verás tus golpes por segundo, tu pico de velocidad, tu rango y tu récord.</p>
+    </section>
+  </div>
+</div>
+
+<main>
+  <div class="wrap">
+    <section class="tool" id="test" aria-label="Prueba de velocidad de la barra espaciadora">
+      <div class="durations" role="group" aria-label="Duración de la prueba">
+        <span class="durations-label">Elige el tiempo</span>
+        <button type="button" class="dur" id="d-1" data-d="1" aria-pressed="false">1 s</button>
+        <button type="button" class="dur" id="d-5" data-d="5" aria-pressed="false">5 s</button>
+        <button type="button" class="dur" id="d-10" data-d="10" aria-pressed="true">10 s</button>
+        <button type="button" class="dur" id="d-15" data-d="15" aria-pressed="false">15 s</button>
+        <button type="button" class="dur" id="d-30" data-d="30" aria-pressed="false">30 s</button>
+        <button type="button" class="dur" id="d-60" data-d="60" aria-pressed="false">60 s</button>
+        <button type="button" class="dur" id="d-100" data-d="100" aria-pressed="false">100 s</button>
+        <button type="button" class="dur" id="d-0" data-d="0" aria-pressed="false">Sin límite</button>
+      </div>
+
+      <dl class="stats">
+        <div class="stat stat-time"><dt id="s-time-label">Quedan</dt><dd id="s-time">10,00</dd></div>
+        <div class="stat"><dt>Pulsaciones</dt><dd id="s-count">0</dd></div>
+        <div class="stat"><dt>HPS</dt><dd id="s-hps">0,00</dd></div>
+        <div class="stat"><dt>Pico en 1 s</dt><dd id="s-max">0</dd></div>
+        <div class="stat stat-best"><dt>Tu récord</dt><dd id="s-best">—</dd></div>
+      </dl>
+
+      <div class="key-zone">
+        <div class="key" id="key" role="button" tabindex="0" aria-label="Barra espaciadora: pulsa o toca aquí">
+          <span class="key-label">Espacio</span>
+        </div>
+        <p class="hint" id="hint" aria-live="polite">Pulsa la <kbd>barra espaciadora</kbd> o toca la tecla para empezar</p>
+      </div>
+
+      <div class="controls">
+        <button type="button" class="btn btn-primary" id="btn-stop" hidden>Detener</button>
+        <button type="button" class="btn" id="btn-reset">Reiniciar</button>
+      </div>
+
+      <div class="result" id="result" hidden aria-live="polite">
+        <div class="result-head">
+          <div class="rank-icon" id="r-icon" aria-hidden="true">🐇</div>
+          <div class="result-main">
+            <p class="result-kicker">Tu rango</p>
+            <p class="result-rank" id="r-rank">Conejo</p>
+            <p class="result-text" id="r-text"></p>
+          </div>
+          <span class="record-badge" id="r-record" hidden>¡Nuevo récord!</span>
+        </div>
+        <p class="result-text" id="r-desc"></p>
+        <div class="chart-box">
+          <p class="chart-title">Pulsaciones por segundo</p>
+          <canvas class="chart" id="chart" role="img" aria-label="Gráfico de pulsaciones por segundo"></canvas>
+        </div>
+        <div class="controls">
+          <button type="button" class="btn btn-primary" id="btn-again">Repetir prueba</button>
+          <button type="button" class="btn" id="btn-share">Compartir resultado</button>
+        </div>
+      </div>
+
+      <div class="recent">
+        <p class="recent-title">Tus últimos intentos</p>
+        <p class="recent-empty" id="recent-empty">Aún no hay intentos. Tus resultados se guardan solo en este navegador.</p>
+        <ol id="recent-list"></ol>
+      </div>
+    </section>
+
+    <ul class="facts" aria-label="Características">
+      <li><b>8</b> modos de tiempo en una sola prueba</li>
+      <li><b>0 €</b> gratis y sin registro</li>
+      <li><b>1:1</b> solo cuenta pulsaciones reales</li>
+      <li><b>📱</b> funciona en móvil y tablet</li>
+    </ul>
+
+    <!-- Bloque AdSense debajo de la prueba: pega aquí tu código de anuncio -->
+    <div class="ad-slot"></div>
+
+    <div class="layout">
+      <nav class="toc" aria-label="Contenido de la guía">
+        <p class="toc-title">En esta guía</p>
+        <ol>
+          <li><a href="#que-es">Qué es un contador de barra espaciadora</a></li>
+          <li><a href="#como-usar">Cómo usar la prueba</a></li>
+          <li><a href="#modos-de-tiempo">Modos de tiempo</a></li>
+          <li><a href="#buen-resultado">Qué resultado es bueno</a></li>
+          <li><a href="#como-se-calcula">Cómo se calculan los HPS</a></li>
+          <li><a href="#rangos">Rangos</a></li>
+          <li><a href="#tecnicas">Técnicas</a></li>
+          <li><a href="#consejos">Consejos</a></li>
+          <li><a href="#teclado">El teclado importa</a></li>
+          <li><a href="#videojuegos">En los videojuegos</a></li>
+          <li><a href="#retos">Retos y TikTok</a></li>
+          <li><a href="#comprobar-tecla">Comprobar tu barra espaciadora</a></li>
+          <li><a href="#usos">Usos</a></li>
+          <li><a href="#preguntas-frecuentes">Preguntas frecuentes</a></li>
+        </ol>
+      </nav>
+
+      <article class="guide">
+        <p class="updated">Última actualización: octubre de 2026</p>
+
+        <section class="sec" aria-labelledby="que-es">
+          <h2 id="que-es">¿Qué es un contador de barra espaciadora?</h2>
+          <p>Un <strong>contador de barra espaciadora</strong> es una prueba en línea que cuenta cuántas veces pulsas la tecla de espacio dentro de un tiempo límite. Cuando el tiempo termina, divide el total entre los segundos y te da tu velocidad en <strong>HPS</strong>, es decir, golpes por segundo.</p>
+          <p>También lo encontrarás como <em>prueba de velocidad de la barra espaciadora</em>, <em>prueba de barra espaciadora</em> o <em>contador de pulsaciones</em>. Es la versión de teclado de la conocida prueba de clics por segundo que se hace con el ratón. La gente lo usa para retarse, comparar marcas con amigos, calentar los dedos antes de jugar o comprobar que la tecla responde bien.</p>
+          <p>Nuestro contador funciona en el navegador, no necesita descargas ni registro y cuenta solo las pulsaciones reales: si dejas la tecla apretada, la repetición automática del sistema no suma.</p>
+        </section>
+
+        <section class="sec" aria-labelledby="como-usar">
+          <h2 id="como-usar">Cómo usar la prueba de barra espaciadora</h2>
+          <ol class="steps">
+            <li><span><strong>Elige un tiempo.</strong> Puedes escoger 1, 5, 10, 15, 30, 60 o 100 segundos, o el modo <em>Sin límite</em>. Por defecto está en 10 segundos.</span></li>
+            <li><span><strong>Empieza a pulsar.</strong> El cronómetro arranca con tu primera pulsación de la <kbd>barra espaciadora</kbd>. En el móvil o la tablet, toca la tecla grande de la pantalla.</span></li>
+            <li><span><strong>Pulsa lo más rápido que puedas</strong> hasta que el tiempo llegue a cero. En el modo sin límite, pulsa <em>Detener</em> cuando quieras terminar.</span></li>
+            <li><span><strong>Revisa tu resultado.</strong> Verás el total de pulsaciones, tus HPS, tu pico dentro de un segundo, tu rango y un gráfico con tu ritmo segundo a segundo.</span></li>
+            <li><span><strong>Vuelve a intentarlo.</strong> Pulsa <em>Reiniciar</em>, o las teclas <kbd>R</kbd> o <kbd>Esc</kbd>. Tu récord se guarda por cada duración.</span></li>
+          </ol>
+          <div class="note"><p><strong>Truco:</strong> mientras la prueba esté visible en pantalla, la barra espaciadora solo cuenta pulsaciones y la página no se desplaza. Si bajas a leer la guía, el espacio vuelve a funcionar como siempre.</p></div>
+        </section>
+
+        <section class="sec" aria-labelledby="modos-de-tiempo">
+          <h2 id="modos-de-tiempo">Todos los modos de tiempo en una sola prueba</h2>
+          <p>No hace falta cambiar de página para probar otra duración. Elige el tiempo con los botones de la prueba y el contador se adapta al instante. Los tiempos cortos miden tu explosividad y los largos, tu resistencia.</p>
+          <div class="cards">
+            <div class="card"><span class="chip">1 s</span><h3 id="test-1-segundo">Prueba de 1 segundo</h3><p>La prueba más pura: mide tu velocidad máxima en un solo arranque, sin cansancio. Una persona media consigue entre 6 y 8 pulsaciones.</p></div>
+            <div class="card"><span class="chip">5 s</span><h3 id="test-5-segundos">Prueba de 5 segundos</h3><p>El clásico de los retos rápidos. Da para un buen ritmo sin que la mano se canse y se puede repetir muchas veces para comparar con amigos.</p></div>
+            <div class="card"><span class="chip">10 s</span><h3 id="test-10-segundos">Prueba de 10 segundos</h3><p>El más popular y el modo por defecto. Equilibra velocidad y aguante: hay que arrancar fuerte y mantener el ritmo hasta el final.</p></div>
+            <div class="card"><span class="chip">15 s</span><h3 id="test-15-segundos">Prueba de 15 segundos</h3><p>Un punto intermedio. Aquí empieza a notarse la fatiga, así que el ritmo y la respiración importan tanto como la velocidad.</p></div>
+            <div class="card"><span class="chip">30 s</span><h3 id="test-30-segundos">Prueba de 30 segundos</h3><p>Medio minuto ya es una prueba de resistencia. Es la duración del famoso reto «300 en 30 segundos», que exige unos 10 golpes por segundo.</p></div>
+            <div class="card"><span class="chip">60 s</span><h3 id="test-60-segundos">Prueba de 60 segundos (1 minuto)</h3><p>Un minuto entero de pulsaciones. Tus HPS bajarán respecto a las pruebas cortas. Ideal para entrenar constancia.</p></div>
+            <div class="card"><span class="chip">100 s</span><h3 id="test-100-segundos">Prueba de 100 segundos</h3><p>El maratón de la barra espaciadora. Gana quien mejor reparte el esfuerzo, no quien sale más rápido.</p></div>
+            <div class="card"><span class="chip">∞</span><h3 id="modo-sin-limite">Modo sin límite</h3><p>Cuenta libre hasta que pulsas <em>Detener</em>. Útil para contar pulsaciones sin presión, comprobar la tecla o inventar tus propios retos.</p></div>
+          </div>
+
+          <h3 id="buen-resultado">¿Qué resultado es bueno en cada tiempo?</h3>
+          <p>Usa esta tabla como referencia para saber dónde estás. Son valores orientativos: dependen del teclado, de la técnica y de si juegas con frecuencia.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th scope="col">Tiempo</th><th scope="col">Normal</th><th scope="col">Bueno</th><th scope="col">Muy rápido</th></tr></thead>
+              <tbody>
+                <tr><td>1 segundo</td><td class="num">6–8</td><td class="num">9–10</td><td class="num hl">12 o más</td></tr>
+                <tr><td>5 segundos</td><td class="num">30–40</td><td class="num">45–55</td><td class="num hl">60 o más</td></tr>
+                <tr><td>10 segundos</td><td class="num">55–75</td><td class="num">80–100</td><td class="num hl">115 o más</td></tr>
+                <tr><td>15 segundos</td><td class="num">80–110</td><td class="num">115–140</td><td class="num hl">165 o más</td></tr>
+                <tr><td>30 segundos</td><td class="num">150–200</td><td class="num">210–260</td><td class="num hl">300 o más</td></tr>
+                <tr><td>60 segundos</td><td class="num">270–360</td><td class="num">380–480</td><td class="num hl">560 o más</td></tr>
+                <tr><td>100 segundos</td><td class="num">420–560</td><td class="num">600–760</td><td class="num hl">880 o más</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-caption">Cuanto más larga es la prueba, más bajan los golpes por segundo por el cansancio. Por eso 60 pulsaciones en 5 segundos tienen más mérito que 300 en 60.</p>
+        </section>
+
+        <!-- Bloque AdSense en mitad del contenido -->
+        <div class="ad-slot"></div>
+
+        <section class="sec" aria-labelledby="como-se-calcula">
+          <h2 id="como-se-calcula">Cómo se calculan los HPS (golpes por segundo)</h2>
+          <p>La fórmula es sencilla: se divide el número total de pulsaciones entre los segundos que ha durado la prueba.</p>
+          <code class="formula">HPS = pulsaciones ÷ segundos</code>
+          <p>Por ejemplo, si haces 78 pulsaciones en 10 segundos, tu velocidad es de 7,8 HPS. En el modo sin límite se usa el tiempo real que pasa desde la primera pulsación hasta que pulsas <em>Detener</em>.</p>
+          <p>Además mostramos tu <strong>pico en 1 segundo</strong>: la mayor cantidad de pulsaciones que has hecho dentro de cualquier ventana de un segundo. Este dato enseña tu velocidad máxima aunque al final te hayas cansado, y el gráfico te deja ver en qué momento fuiste más rápido.</p>
+          <p>HPS y CPS miden lo mismo (acciones por segundo). Solemos decir CPS para los clics del ratón y HPS o «golpes por segundo» para el teclado.</p>
+        </section>
+
+        <section class="sec" aria-labelledby="rangos">
+          <h2 id="rangos">Rangos: ¿qué animal eres?</h2>
+          <p>Al terminar cada prueba te asignamos un rango según tus golpes por segundo. Así ves tu nivel de un vistazo y sabes cuánto te falta para el siguiente.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th scope="col">Rango</th><th scope="col">HPS</th><th scope="col">Qué significa</th></tr></thead>
+              <tbody>
+                <tr><td>🦥 Perezoso</td><td class="num">menos de 3</td><td>Primer contacto con la prueba. Hay mucho margen de mejora.</td></tr>
+                <tr><td>🐢 Tortuga</td><td class="num">3 – 4,4</td><td>Ritmo tranquilo. Alternar los pulgares te hará subir rápido.</td></tr>
+                <tr><td>🐧 Pingüino</td><td class="num">4,5 – 5,9</td><td>Algo por debajo de la media. Relaja la muñeca.</td></tr>
+                <tr><td>🐇 Conejo</td><td class="num">6 – 7,4</td><td>Velocidad normal de una persona media.</td></tr>
+                <tr><td>🦘 Canguro</td><td class="num">7,5 – 8,9</td><td>Por encima de la media.</td></tr>
+                <tr><td>🐎 Caballo</td><td class="num">9 – 10,9</td><td>Muy rápido, nivel de jugador habitual.</td></tr>
+                <tr><td>🦅 Halcón</td><td class="num">11 – 12,9</td><td>Velocidad de élite.</td></tr>
+                <tr><td>🐆 Guepardo</td><td class="num hl">13 o más</td><td>Entre los más rápidos. Técnica excelente.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="sec" aria-labelledby="tecnicas">
+          <h2 id="tecnicas">Técnicas para pulsar la barra espaciadora más rápido</h2>
+          <p>Machacar la tecla con un solo dedo tiene un límite. Si quieres subir de rango, prueba estas técnicas y quédate con la que te resulte más cómoda.</p>
+          <div class="cards">
+            <div class="card"><span class="chip">Más usada</span><h3 id="tecnica-pulgares">Pulgares alternos</h3><p>Pulsa alternando el pulgar izquierdo y el derecho. Mientras un dedo sube, el otro baja, así que casi duplicas la frecuencia. Es la más fácil de aprender.</p></div>
+            <div class="card"><span class="chip">Una mano</span><h3 id="tecnica-mariposa">Técnica mariposa</h3><p>Coloca el índice y el corazón de la misma mano sobre la barra y alterna, como si tamborilearas. Cansa menos que el pulgar y deja la otra mano libre.</p></div>
+            <div class="card"><span class="chip">Ráfagas</span><h3 id="tecnica-vibracion">Vibración</h3><p>Tensa un poco el antebrazo para que la mano vibre sobre la tecla. Da ráfagas muy rápidas en pruebas de 1 a 5 segundos, pero cansa mucho y es poco precisa.</p></div>
+            <div class="card"><span class="chip">Base de todo</span><h3 id="tecnica-recorrido-corto">Recorrido corto</h3><p>No hace falta hundir la tecla hasta el fondo. La pulsación se registra antes del tope, así que con golpes cortos y ligeros ganas velocidad y cansas menos.</p></div>
+          </div>
+        </section>
+
+        <section class="sec" aria-labelledby="consejos">
+          <h2 id="consejos">Consejos para mejorar tu marca</h2>
+          <ul class="checks">
+            <li><strong>Calienta un minuto</strong> moviendo dedos y muñecas antes de buscar tu récord.</li>
+            <li><strong>Pulsa en el centro de la barra.</strong> En los extremos la tecla puede bailar.</li>
+            <li><strong>Mantén la muñeca relajada.</strong> La tensión te frena y cansa antes.</li>
+            <li><strong>Entrena en series cortas</strong> de 5 o 10 segundos y descansa entre intentos.</li>
+            <li><strong>Usa una superficie firme</strong> para que el teclado no se mueva.</li>
+            <li><strong>Sigue tu progreso</strong> con el récord de cada duración.</li>
+          </ul>
+          <div class="note"><p><strong>Cuida tus manos.</strong> Si notas dolor, hormigueo o rigidez, para y descansa. Ninguna marca merece una lesión.</p></div>
+        </section>
+
+        <section class="sec" aria-labelledby="teclado">
+          <h2 id="teclado">¿Influye el teclado en el resultado?</h2>
+          <p>Sí, y bastante. La misma persona puede sacar resultados distintos con teclados diferentes. Estos son los factores que más pesan:</p>
+          <dl class="defs">
+            <div><dt>Mecánico o de membrana</dt><dd>Los teclados mecánicos suelen tener una respuesta más clara y constante. Los de membrana necesitan más fuerza y su tacto es más blando.</dd></div>
+            <div><dt>Punto de activación</dt><dd>Los interruptores lineales o de activación rápida se activan con menos recorrido, lo que facilita pulsaciones cortas y rápidas.</dd></div>
+            <div><dt>Estabilizadores</dt><dd>Una barra con buenos estabilizadores responde igual en el centro que en los lados.</dd></div>
+            <div><dt>Portátiles</dt><dd>Su barra suele ser fina y de recorrido corto. Hay quien va más rápido con ella y quien prefiere un teclado externo.</dd></div>
+            <div><dt>Conexión y retardo</dt><dd>Los teclados Bluetooth pueden añadir algo de retraso, y el filtro antirrebote limita cuántas pulsaciones muy seguidas se aceptan.</dd></div>
+          </dl>
+          <p>Si quieres comparar con amigos de forma justa, haced la prueba con el mismo teclado.</p>
+        </section>
+
+        <section class="sec" aria-labelledby="videojuegos">
+          <h2 id="videojuegos">La barra espaciadora en los videojuegos</h2>
+          <p>En la mayoría de los juegos de ordenador, la barra espaciadora es la tecla de <strong>saltar</strong>. Por eso la velocidad y, sobre todo, el ritmo con esa tecla marcan la diferencia en muchos géneros:</p>
+          <ul class="checks checks-1">
+            <li><strong>Mundo abierto y construcción</strong>, como Minecraft, donde sirve para saltar, nadar hacia arriba o volar.</li>
+            <li><strong>Juegos de disparos</strong>, para saltar obstáculos, esquivar disparos o encadenar saltos de movimiento.</li>
+            <li><strong>Plataformas y juegos de un botón</strong>, como Geometry Dash, donde todo depende de pulsar en el momento justo.</li>
+            <li><strong>Juegos de ritmo</strong>, que premian pulsaciones rápidas y regulares.</li>
+            <li><strong>Juegos de clics e incrementales</strong> de navegador, donde más pulsaciones significan más puntos.</li>
+          </ul>
+          <p>Usar el contador unos minutos antes de jugar es un buen calentamiento. Fíjate también en el gráfico: un ritmo estable suele servir más en una partida que una ráfaga que se apaga a los dos segundos.</p>
+        </section>
+
+        <section class="sec" aria-labelledby="retos">
+          <h2 id="retos">Retos de barra espaciadora con amigos y en TikTok</h2>
+          <p>Los retos de pulsar la barra espaciadora se hicieron populares en vídeos cortos de redes sociales. Estos son los más conocidos:</p>
+          <div class="challenges">
+            <div class="challenge"><b>100 en 10 s</b><span>Unos 10 golpes por segundo sin parar.</span></div>
+            <div class="challenge"><b>300 en 30 s</b><span>El reto de resistencia más famoso.</span></div>
+            <div class="challenge"><b>Guepardo</b><span>Llegar al rango máximo: 13 HPS o más.</span></div>
+          </div>
+          <p>Para un duelo justo, usad la misma duración y el mismo teclado, y quedaos con el mejor de tres intentos. Al terminar, usa el botón <em>Compartir resultado</em> para enviar tu marca y retar a quien quieras.</p>
+        </section>
+
+        <section class="sec" aria-labelledby="comprobar-tecla">
+          <h2 id="comprobar-tecla">¿Sirve para comprobar si tu barra espaciadora funciona?</h2>
+          <p>Sí, como primera prueba rápida. Elige el modo <em>Sin límite</em> y pulsa la tecla despacio, una vez cada segundo:</p>
+          <ul class="checks checks-1">
+            <li>Si el contador sube <strong>de uno en uno</strong>, la tecla registra bien.</li>
+            <li>Si a veces sube <strong>de dos en dos</strong> con una sola pulsación, puede haber doble registro, algo habitual en interruptores desgastados.</li>
+            <li>Si alguna pulsación <strong>no cuenta</strong>, puede haber suciedad bajo la tecla o un estabilizador suelto.</li>
+          </ul>
+          <p>Prueba también a pulsar en el centro y en los dos extremos de la barra. Si un lado falla más, el problema suele estar en el estabilizador.</p>
+        </section>
+
+        <section class="sec" aria-labelledby="usos">
+          <h2 id="usos">¿Para qué sirve un contador de barra espaciadora?</h2>
+          <ul class="checks">
+            <li>Medir tu velocidad de pulsación y seguir tu progreso.</li>
+            <li>Competir con amigos o en redes sociales.</li>
+            <li>Calentar los dedos antes de jugar.</li>
+            <li>Entrenar el ritmo para juegos de saltos.</li>
+            <li>Probar un teclado nuevo o comparar interruptores.</li>
+            <li>Comprobar si la barra espaciadora registra bien.</li>
+            <li>Contar pulsaciones con el modo sin límite.</li>
+            <li>Pasar un buen rato en un descanso.</li>
+          </ul>
+        </section>
+
+        <!-- Bloque AdSense antes de las preguntas frecuentes -->
+        <div class="ad-slot"></div>
+
+        <section class="sec" aria-labelledby="preguntas-frecuentes">
+          <h2 id="preguntas-frecuentes">Preguntas frecuentes</h2>
+          <div class="faq">
+            <details>
+              <summary><h3>¿Qué mide esta prueba de la barra espaciadora?</h3></summary>
+              <div><p>Cuenta cuántas veces pulsas la tecla de espacio en un tiempo determinado y calcula tus golpes por segundo, tu pico de velocidad y tu rango.</p></div>
+            </details>
+            <details>
+              <summary><h3>¿El contador de barra espaciadora es gratis?</h3></summary>
+              <div><p>Sí. Es totalmente gratis, funciona en el navegador y no necesitas registrarte ni instalar nada.</p></div>
+            </details>
+            <details>
+              <summary><h3>¿Cuál es una buena velocidad en la barra espaciadora?</h3></summary>
+              <div><p>En pruebas cortas, una persona media consigue entre 6 y 8 golpes por segundo. A partir de 9 se considera muy rápido y por encima de 12 es nivel de élite.</p></div>
+            </details>
+            <details>
+              <summary><h3>¿Cuántas pulsaciones es normal hacer en 10 segundos?</h3></summary>
+              <div><p>Lo habitual está entre 55 y 75 pulsaciones. Entre 80 y 100 es un resultado bueno, y más de 115 es muy rápido.</p></div>
+            </details>
+            <details>
+              <summary><h3>¿Cuándo empieza a contar el cronómetro?</h3></summary>
+              <div><p>Con tu primera pulsación. Así no pierdes tiempo de reacción y la prueba es justa desde el primer golpe.</p></div>
+            </details>
+            <details>
+              <summary><h3>¿Por qué no cuenta si mantengo pulsada la barra espaciadora?</h3></summary>
+              <div><p>Porque al dejar una tecla apretada el sistema repite el carácter de forma automática. Esas repeticiones no son pulsaciones reales, así que el contador las ignora.</p></div>
+            </details>
+            <details>
+              <summary><h3>¿Funciona en el móvil y en la tablet?</h3></summary>
+              <div><p>Sí. En pantallas táctiles, toca la tecla grande que aparece en la prueba. Cada toque cuenta como una pulsación.</p></div>
+            </details>
+            <details>
+              <summary><h3>¿Se guardan mis resultados?</h3></summary>
+              <div><p>Tu récord de cada duración y tus últimos intentos se guardan solo en tu navegador. No se envían a ningún servidor y desaparecen si borras los datos del navegador.</p></div>
+            </details>
+            <details>
+              <summary><h3>¿Mi teclado afecta al resultado?</h3></summary>
+              <div><p>Sí. El tipo de interruptor, el recorrido de la tecla, los estabilizadores y la conexión influyen. Para comparar con otras personas, lo más justo es usar el mismo teclado.</p></div>
+            </details>
+            <details>
+              <summary><h3>¿Es lo mismo HPS que CPS?</h3></summary>
+              <div><p>Miden lo mismo: acciones por segundo. CPS se usa para los clics del ratón y HPS para los golpes de teclado. Los resultados no son directamente comparables, porque ratón y teclado se pulsan de forma distinta.</p></div>
+            </details>
+            <details>
+              <summary><h3>¿Existe un récord mundial de la barra espaciadora?</h3></summary>
+              <div><p>No hay un récord oficial. Cada web tiene sus propias clasificaciones y las marcas cambian según el teclado y la duración. En pruebas muy cortas, algunos jugadores superan los 14 golpes por segundo.</p></div>
+            </details>
+            <details>
+              <summary><h3>¿Puedo usar la prueba para saber si mi barra espaciadora está rota?</h3></summary>
+              <div><p>Sirve como primera comprobación. Usa el modo sin límite y pulsa despacio: cada pulsación debe sumar exactamente uno. Si cuenta doble o se salta pulsaciones, revisa la tecla.</p></div>
+            </details>
+            <details>
+              <summary><h3>¿Pulsar muy rápido puede hacerme daño?</h3></summary>
+              <div><p>Unas cuantas pruebas no suelen causar problemas, pero repetir durante mucho rato puede cargar los tendones. Descansa entre intentos y para si notas dolor u hormigueo.</p></div>
+            </details>
+            <details>
+              <summary><h3>¿Puedo usar otra tecla?</h3></summary>
+              <div><p>Esta prueba está pensada solo para la barra espaciadora, que es la tecla que se usa en los retos y en los juegos. En el móvil se usa el toque en pantalla.</p></div>
+            </details>
+          </div>
+        </section>
+
+        <aside class="cta" aria-label="Volver a la prueba">
+          <div>
+            <h2>¿Listo para batir tu récord?</h2>
+            <p>Elige un tiempo y demuestra lo rápido que eres.</p>
+          </div>
+          <a class="btn" href="#test">Hacer la prueba</a>
+        </aside>
+      </article>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Barra Veloz</strong> es un contador de barra espaciadora gratuito para medir tu velocidad, retar a tus amigos y probar tu teclado. © 2026 Barra Veloz.</p>
+    <ul class="footer-links">
+      <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="politica-de-privacidad.html">Política de privacidad</a></li>
+      <li><a href="terminos-y-condiciones.html">Términos y condiciones</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>

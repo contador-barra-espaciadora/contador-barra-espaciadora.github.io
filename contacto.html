@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contacto | Barra Veloz</title>
+<meta name="description" content="Ponte en contacto con el equipo de Barra Veloz para sugerencias, errores, colaboraciones o dudas sobre privacidad.">
+<link rel="canonical" href="https://contador-barra-espaciadora.github.io/contacto.html">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#A3122B">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<!-- Google AdSense: pega aquí el script de AdSense que te da Google (en el <head> de todas las páginas) -->
+</head>
+<body>
+
+<div class="band band-slim">
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Barra Veloz, inicio"><span class="brand-mark" aria-hidden="true"></span>Barra Veloz</a>
+    </div>
+  </header>
+</div>
+
+<main class="wrap page">
+  <article class="prose">
+
+    <h1>Contacto</h1>
+    <p class="lead">¿Tienes una sugerencia, has encontrado un fallo o quieres colaborar con nosotros? Nos encantará leerte.</p>
+
+    <h2>Escríbenos por correo</h2>
+    <div class="contact-card">
+      <code id="email">contacto@tudominio.com</code>
+      <button type="button" class="btn" id="copy-email">Copiar correo</button>
+    </div>
+    <p>Respondemos normalmente en un plazo de 2 a 5 días laborables.</p>
+
+    <h2>Para que podamos ayudarte mejor</h2>
+    <p>Si nos escribes por un problema con el contador, cuéntanos:</p>
+    <ul>
+      <li>Qué navegador y qué dispositivo usas (por ejemplo, Chrome en Windows o Safari en iPhone).</li>
+      <li>Qué modo de tiempo elegiste.</li>
+      <li>Qué esperabas que pasara y qué pasó en realidad.</li>
+    </ul>
+
+    <h2>Otros motivos de contacto</h2>
+    <ul>
+      <li><strong>Sugerencias:</strong> nuevos modos, retos o mejoras de la guía.</li>
+      <li><strong>Colaboraciones:</strong> propuestas de contenido o enlaces relacionados con teclados y videojuegos.</li>
+      <li><strong>Privacidad:</strong> para ejercer tus derechos sobre datos personales, indica en el asunto «Privacidad». Más información en la <a href="politica-de-privacidad.html">política de privacidad</a>.</li>
+    </ul>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Barra Veloz</strong> es un contador de barra espaciadora gratuito para medir tu velocidad, retar a tus amigos y probar tu teclado. © 2026 Barra Veloz.</p>
+    <ul class="footer-links">
+      <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="politica-de-privacidad.html">Política de privacidad</a></li>
+      <li><a href="terminos-y-condiciones.html">Términos y condiciones</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" hidden></div>
+<script>
+(function () {
+  var b = document.getElementById("copy-email"), e = document.getElementById("email"), t = document.getElementById("toast");
+  function say(m) { t.textContent = m; t.hidden = false; setTimeout(function () { t.hidden = true; }, 2200); }
+  b.addEventListener("click", function () {
+    var v = e.textContent.trim();
+    function sel() { var r = document.createRange(); r.selectNodeContents(e); var s = getSelection(); s.removeAllRanges(); s.addRange(r); say("Correo seleccionado. Cópialo con Ctrl+C."); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(v).then(function () { say("Correo copiado"); }, sel); else sel();
+  });
+})();
+</script>
+</body>
+</html>
